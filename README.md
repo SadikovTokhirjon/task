@@ -35,6 +35,44 @@ The application will be available at:
 http://localhost:8000
 ```
 
+## API endpoints
+
+Base URL:
+
+```text
+http://localhost:8000
+```
+
+### Authentication
+
+- POST /api/users/register/ — register a new user
+- POST /api/users/login/ — login and get JWT tokens
+- POST /api/users/logout/ — logout the authenticated user
+- POST /api/users/token/refresh/ — refresh the JWT access token
+
+### Tasks
+
+- GET /api/tasks/ — list all tasks
+- POST /api/tasks/ — create a new task
+- GET /api/tasks/{id}/ — get one task by ID
+- PUT /api/tasks/{id}/ — update a task
+- DELETE /api/tasks/{id}/ — delete a task
+- PATCH /api/tasks/{id}/update-status/ — update task status
+
+### Employees
+
+- GET /api/employees/ — list all employees
+- POST /api/employees/ — create a new employee
+- GET /api/employees/{id}/ — get one employee by ID
+- PUT /api/employees/{id}/ — update an employee
+- DELETE /api/employees/{id}/ — delete an employee
+
+### Admin
+
+- GET /admin/ — Django admin panel
+
+> Most API endpoints require authentication. Use the JWT token received from login as a Bearer token in the Authorization header.
+
 ## Useful commands
 
 Stop the containers:
